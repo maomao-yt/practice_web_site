@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>フォームの練習</title>
+  </head>
+
+  <body>
+    <h1>アルバイト応募フォーム</h1>
+
+    <form action="#" method="POST">
+      <dl>
+        <dt><label for="name">お名前</label></dt>
+        <dd><input id="name" type="text" name="username" placeholder="田中太郎" required></dd>
+        <br>
+
+        <dt><label for="email">email</label></dt>
+        <dd><input id="email" type="email" name="email" placeholder="example@xxx.com" required></dd>
+        <br>
+
+        <dt>性別</dt>
+        <dd>
+          <label><input type="radio" name="gender" value="male" checked>男性</label>
+          <label><input type="radio" name="gender" value="female">女性</label>
+        </dd>
+        <br>
+
+        <dt><label for="job">現在のご職業</label></dt>
+        <dd>
+          <select id="job" name="job">
+            <option value="" selected>選択してください</option>
+            <option value="seisyain">正社員</option>
+            <option value="keiyakusyain">契約社員</option>
+            <option value="hakensyain">派遣社員</option>
+            <option value="arubaito">アルバイト</option>
+            <option value="gakusei">学生</option>
+            <option value="neet">無職</option>
+          </select>
+        </dd>
+        <br>
+
+        <dt><label for="contents">自己PR</label></dt>
+        <dd><textarea id="contents" name="contents"></textarea></dd>
+        <br>
+        <dt><label for="privacy">プライバシーポリシーに同意する</label></dt>
+        <dd><input id="privacy" type="checkbox"></dd>
+      </dl>
+
+      <input type="submit" name="submit" value="送信">
+    </form>
+  </body>
+
+</html>
