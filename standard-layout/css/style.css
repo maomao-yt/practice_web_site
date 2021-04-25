@@ -77,7 +77,7 @@ a:link,a:visited,a:hover,a:active{
 
 .global-nav .nav-item{
   display: inline-block;
-  margin: 10px;
+  margin: 0 10px
 }
 
 .global-nav .nav-item a{
@@ -90,13 +90,18 @@ a:link,a:visited,a:hover,a:active{
   color: #666;
   font-size: 1.3rem;
   letter-spacing: 1px;/*文字同士にスペースをつける*/
-   transition: 0.15s;/*スタイル変化の時間を調整する */
+  transition: 0.15s;/*スタイル変化の時間を調整する */
 }
 
 .global-nav .nav-item.active a,
 .global-nav .nav-item a:hover{
   background-color: #d03c56;
   color: #fff;
+}
+
+/* hidden */
+.hidden{
+  display: none;
 }
 
 /* hot_topic */
