@@ -1,26 +1,29 @@
+const lists =document.getElementById('lists');
+
+const remove = deleteButton=>{
+ const targetTask =deleteButton.closest('li');
+ lists.removeChild(targetTask); 
+}
+
 function append() {
-  let content =document.getElementById('content');
+  const content =document.getElementById('content');
   if (content.value ===""){
     window.alert('タスクを入力してください！！')
     return
   }
-  let text = document.createTextNode(content.value);
-  let li = document.createElement('li');
+  const text = document.createTextNode(content.value);
+  const li = document.createElement('li');
   li.appendChild(text);
-  let lists =document.getElementById('lists');
+  
+  const deleteButton =document.createElement('input');
+  deleteButton.type ='button';
+  deleteButton.value ='削除';
+  deleteButton.className ='deleteButton';
+  deleteButton.addEventListener('click',()=>remove(deleteButton));
+  li.appendChild(deleteButton);
+
   lists.appendChild(li);
 
   content.value ="";
 }
 
-function remove() {
-  let lists =document.getElementById('lists');
-  childCount =lists.childElementCount;
-  if (childCount === 0){
-    window.alert('削除できません');
-    return
-  }else{
-    let li = lists.getElementsByTagName('li')
-    lists.removeChild(li[childCount-1])
-  }
-}

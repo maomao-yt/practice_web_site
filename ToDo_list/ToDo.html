@@ -3,14 +3,21 @@
   <head>
     <meta charset="utf-8">
     <title>ToDoリスト</title>
+    <style>
+      .deleteButton{
+        margin-left: 20px;
+      }
+      .text{
+        width: 300px;
+      }
+    </style>
   </head>
   <body>
     <h1>ToDoリスト</h1>
     <ul id="lists">
     </ul>
-    <input id="content" type="textBox" placeholder="タスクを入力してください">
+    <input class="text" id="content" type="textBox" placeholder="タスクを入力してください">
     <input type="button" value="追加" onclick="append()">
-    <input type="button" value="削除" onclick="remove()">
     <script src="js/ToDo.js"></script>
   </body>
 </html>
